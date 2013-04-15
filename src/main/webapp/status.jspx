@@ -1,0 +1,77 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0">
+
+    <jsp:useBean id="documentBuilderFactory"
+                 scope="request"
+                 type="javax.xml.parsers.DocumentBuilderFactory" />
+    <jsp:useBean id="documentBuilderFactoryClass"
+                 scope="request"
+                 type="java.lang.Class" />
+    <jsp:useBean id="documentBuilderFactoryClassLoader"
+                 scope="request"
+                 type="java.lang.ClassLoader" />
+
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xml:lang="en"
+          lang="en">
+    <head>
+        <title>Status > Success</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <!--Sidebar content-->
+            </div>
+            <div class="span8">
+
+                <div class="page-header">
+                    <h1>Test page <small>load well if no incompatibilities</small></h1>
+                </div>
+
+                <div class="alert alert-success">
+                  <h4 class="alert-heading">Yeah !</h4>
+                  JSPX File was loaded succesfully, that means that there is no Xerces/JAXP incompatibilities.
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>DocumentBuilderFactory's instance</td>
+                        <td>
+                            <pre>
+${documentBuilderFactory}
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DocumentBuilderFactory's Class</td>
+                        <td>
+                            <pre>
+${documentBuilderFactoryClass}
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DocumentBuilderFactory's ClassLoader</td>
+                        <td>
+                            <pre>
+${documentBuilderFactoryClassLoader}
+                            </pre>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+</jsp:root>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <servlet>
+    <servlet-name>ErrorServlet</servlet-name>
+    <servlet-class>com.peergreen.jonas.tutorials.classloading.ClassloadingErrorServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.peergreen.jonas.tutorials.classloading.TestServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LoadingServlet</servlet-name>
+    <servlet-class>com.peergreen.jonas.tutorials.classloading.ClassLoaderLocationFinderServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoadingServlet</servlet-name>
+    <url-pattern>/load</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ErrorServlet</servlet-name>
+    <url-pattern>/error</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/try</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>/index.html</welcome-file>
+  </welcome-file-list>
+
+  <error-page>
+    <exception-type>java.lang.ClassCastException</exception-type>
+    <location>/error</location>
+  </error-page>
+</web-app>

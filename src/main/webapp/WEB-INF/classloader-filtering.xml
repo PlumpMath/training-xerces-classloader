@@ -1,0 +1,11 @@
+<class-loader-filtering xmlns="http://org.ow2.jonas.lib.loader.mapping">
+
+   <!-- List of filters used to exclude packages/resources that are used internally by
+        the Application Server but that will not be available to applications.
+        An empty list will not hide any packages to the applications
+        This list is used both to hide resources and classes to applications. -->
+    <filters>
+      <!--<filter-name>org.apache.xerces.*</filter-name>-->
+      <!--<filter-name>javax.xml.parsers.*</filter-name>-->
+    </filters>
+</class-loader-filtering>

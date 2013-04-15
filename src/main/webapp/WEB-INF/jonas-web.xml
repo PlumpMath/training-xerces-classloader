@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jonas-web-app xmlns="http://www.objectweb.org/jonas/ns"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.objectweb.org/jonas/ns
+                                   http://jonas.ow2.org/ns/jonas-web-app_4_0.xsd">
+
+  <context-root>xerces-classloading</context-root>
+    <!--
+    true  : the context uses a classloader using the Java 2 delegation model (default)
+    false : the class loader looks inside the web application first, before asking parent class loader
+    -->
+    <java2-delegation-model>true</java2-delegation-model>
+</jonas-web-app>
